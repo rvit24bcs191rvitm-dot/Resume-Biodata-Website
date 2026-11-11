@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>My Personal Website</h1>
+    <nav>
+      <a class="active" href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="biodata.html">Bio-data</a>
+    </nav>
+  </header>
+  <main class="hero">
+    <div class="avatar" aria-hidden="true">👋</div>
+    <h2>Hello, I'm Rida</h2>
+    <p class="lead">Student | Aspiring Web Developer</p>
+    <p>Welcome to my personal website. Explore my resume and bio-data using the links below.</p>
+    <div class="actions">
+      <a class="button" href="resume.html">View Resume</a>
+      <a class="button secondary" href="biodata.html">View Bio-data</a>
+    </div>
+    <button id="welcomeBtn" type="button">Show welcome message</button>
+    <p id="welcomeMessage" role="status"></p>
+  </main>
+  <footer>© 2026 Your Name • Student Portfolio</footer>
+  <script>
+    $(function () {
+      $("#welcomeBtn").on("click", function () {
+        $("#welcomeMessage").text("Thank you for visiting my website!").hide().fadeIn(400);
+      });
+    });
+  </script>
+</body>
+</html>
